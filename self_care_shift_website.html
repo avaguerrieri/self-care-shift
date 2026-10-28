@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Self-Care Shift | Care for the caregivers</title>
+<style>
+:root{--cream:#f7f3eb;--sage:#dce5d7;--green:#405747;--tan:#b99c7a;--ink:#28352d;--white:#fffdf9;--muted:#6e756d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:rgba(247,243,235,.96);position:sticky;top:0;z-index:5;border-bottom:1px solid #e6dfd2}
+.logo{font-family:Georgia,serif;font-size:1.3rem;font-weight:bold;letter-spacing:.2px;color:var(--green)}.logo span{display:block;font: .68rem Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+nav{display:flex;gap:24px;align-items:center}nav a{color:var(--ink);text-decoration:none;font-size:.92rem}nav a:hover{color:#8b6f4e}
+.btn{display:inline-block;background:var(--green);color:white!important;padding:12px 19px;border-radius:4px;text-decoration:none;border:0;cursor:pointer;font-weight:bold;font-size:.92rem}.btn:hover{background:#2f4235}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;padding:76px 7% 82px;max-width:1400px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:.76rem;font-weight:bold;color:#8a7256}.hero h1{font:clamp(2.7rem,5vw,5rem)/1.05 Georgia,serif;color:var(--green);margin:15px 0 20px;letter-spacing:-1.8px}.hero p{font-size:1.1rem;color:#59645b;max-width:560px}.hero-actions{display:flex;gap:14px;align-items:center;margin-top:28px;flex-wrap:wrap}.text-link{color:var(--green);font-weight:bold;text-decoration:none}
+.hero-art{min-height:390px;border-radius:48% 48% 10px 10px;background:linear-gradient(145deg,#d7e0d1,#f0e5d5);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.van{width:78%;height:160px;background:#fffdf8;border-radius:24px 30px 15px 15px;position:relative;box-shadow:0 20px 35px #5d6a5522;transform:translateY(25px)}
+.van:before{content:"";position:absolute;right:-36px;bottom:0;width:65px;height:105px;background:#fffdf8;clip-path:polygon(0 0,55% 0,100% 45%,100% 100%,0 100%);border-radius:0 15px 10px 0}
+.van:after{content:"";position:absolute;left:30px;top:20px;width:55%;height:46px;background:#dfe7dc;border-radius:6px}
+.van-title{position:absolute;top:80px;left:28px;font: bold 1.05rem Georgia,serif;color:var(--green);z-index:1}.van-sub{position:absolute;top:105px;left:28px;font-size:.55rem;letter-spacing:1.5px;color:#8b7359;z-index:1}
+.wheel{position:absolute;bottom:-22px;left:45px;width:54px;height:54px;background:#39443d;border:9px solid #d1d0c7;border-radius:50%;z-index:2}.wheel.two{left:auto;right:5px}
+.sun{position:absolute;width:190px;height:190px;border-radius:50%;background:#f8f0df;right:8%;top:10%;opacity:.85}.ground{position:absolute;bottom:0;width:100%;height:75px;background:#b5c3ab}
+section{padding:72px 7%}.section-inner{max-width:1180px;margin:auto}.center{text-align:center}.section-title{font:clamp(2rem,3.5vw,3.2rem)/1.15 Georgia,serif;color:var(--green);margin:10px 0 16px}.intro{max-width:670px;margin:0 auto;color:var(--muted)}
+.problem{background:var(--white)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}.card{background:#fff;border:1px solid #e9e2d7;padding:27px;border-radius:8px}.icon{width:46px;height:46px;border-radius:50%;background:var(--sage);display:grid;place-items:center;font-size:1.3rem;margin-bottom:15px}.card h3{font:1.3rem Georgia,serif;color:var(--green);margin:0 0 8px}.card p{color:var(--muted);margin:0;font-size:.95rem}
+.services{background:var(--sage)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}.service{background:var(--white);padding:23px 19px;border-radius:7px}.service h3{font:1.15rem Georgia,serif;color:var(--green);margin:0 0 8px}.service .time{font-size:.8rem;color:#8b7359;font-weight:bold}.service p{font-size:.92rem;color:var(--muted)}.price{font-weight:bold;color:var(--green)}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:35px}.step-number{font:2.5rem Georgia,serif;color:var(--tan)}.step h3{font:1.25rem Georgia,serif;color:var(--green);margin:5px 0}.step p{color:var(--muted);margin-top:5px}
+.story{background:#ede4d7}.story-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:center}.story-mark{background:var(--green);color:#fffdf8;padding:42px;border-radius:9px;text-align:center}.story-mark strong{font:2.2rem Georgia,serif;display:block}.story-mark span{color:#e2d2bc;letter-spacing:1px;font-size:.8rem}.story-copy p{color:#586259}
+.partners{background:var(--green);color:white;text-align:center}.partners .section-title{color:white}.partners .intro{color:#e0e7de}.partners .btn{background:#e8ddcb;color:var(--green)!important;margin-top:24px}
+footer{padding:27px 7%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}.modal{display:none;position:fixed;inset:0;background:#1d2921aa;z-index:20;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal-box{background:var(--white);padding:30px;border-radius:10px;max-width:500px;width:100%;max-height:90vh;overflow:auto}.modal-box h2{font:2rem Georgia,serif;color:var(--green);margin-top:0}.close{float:right;background:none;border:0;font-size:1.5rem;cursor:pointer}.field{margin:13px 0}.field label{display:block;font-size:.88rem;font-weight:bold;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:11px;border:1px solid #d9d3c7;border-radius:4px;background:white;font:inherit}.notice{font-size:.82rem;color:var(--muted)}#confirmation{display:none;background:var(--sage);padding:14px;border-radius:5px;color:var(--green);margin-top:15px}
+@media(max-width:800px){nav{gap:12px}nav a:not(.btn){display:none}.hero,.story-layout{grid-template-columns:1fr}.hero{padding-top:45px}.hero-art{min-height:300px}.cards{grid-template-columns:1fr}.service-grid{grid-template-columns:repeat(2,1fr)}.how-grid{grid-template-columns:1fr;gap:15px}section{padding:55px 6%}}
+@media(max-width:450px){.service-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:2.8rem}header{padding:14px 5%}.logo{font-size:1.05rem}header .btn{padding:10px 12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">The Self-Care Shift <span>Care for the caregivers</span></div>
+  <nav><a href="#services">Services</a><a href="#how">How it works</a><a href="#story">Our story</a><a class="btn" href="#book" onclick="openBooking(event)">Book a visit</a></nav>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">A little care, right where you work</div>
+    <h1>You take care of everyone.<br><em>Let us care for you.</em></h1>
+    <p>A mobile hair salon designed for healthcare workers. Enjoy a refreshing wash, trim, or quick style without making a separate trip to the salon.</p>
+    <div class="hero-actions"><a class="btn" href="#book" onclick="openBooking(event)">Explore booking</a><a class="text-link" href="#services">Explore services →</a></div>
+    <p class="notice">Appointments are planned around participating workplace locations and approved schedules.</p>
+  </div>
+  <div class="hero-art" role="img" aria-label="Illustration of a cream mobile salon van">
+    <div class="sun"></div><div class="ground"></div>
+    <div class="van"><div class="van-title">The Self-Care Shift</div><div class="van-sub">CARE FOR THE CAREGIVERS</div><div class="wheel"></div><div class="wheel two"></div></div>
+  </div>
+</section>
+<section class="problem">
+ <div class="section-inner center">
+  <div class="eyebrow">We understand busy shifts</div><h2 class="section-title">Self-care should fit your life.</h2>
+  <p class="intro">Healthcare work can leave little time for personal appointments. We’re bringing simple hair services closer to where you already are.</p>
+  <div class="cards">
+   <article class="card"><div class="icon">◷</div><h3>Limited time</h3><p>Long shifts and changing schedules can make it difficult to find time for a traditional salon visit.</p></article>
+   <article class="card"><div class="icon">↗</div><h3>One more errand</h3><p>Travel, parking, and fitting in an appointment can turn self-care into another task.</p></article>
+   <article class="card"><div class="icon">♡</div><h3>Time to recharge</h3><p>Healthcare workers deserve convenient ways to pause, reset, and do something for themselves.</p></article>
+  </div>
+ </div>
+</section>
+<section class="services" id="services">
+ <div class="section-inner center"><div class="eyebrow">Simple services, thoughtful care</div><h2 class="section-title">A little refresh goes a long way.</h2><p class="intro">A sample menu for our planned launch. Final services, timing, and prices will be confirmed before opening.</p>
+  <div class="service-grid">
+   <article class="service"><h3>Wash & Reset</h3><div class="time">10–15 MIN</div><p>A refreshing shampoo and relaxing scalp massage.</p><div class="price">Sample price: $18</div></article>
+   <article class="service"><h3>Quick Blowout</h3><div class="time">25–30 MIN</div><p>A smooth, polished finish for your day or evening.</p><div class="price">Sample price: $35</div></article>
+   <article class="service"><h3>Trim & Tidy</h3><div class="time">20–30 MIN</div><p>Simple trims and bang maintenance.</p><div class="price">Sample price: $30</div></article>
+   <article class="service"><h3>Quick Style</h3><div class="time">15–20 MIN</div><p>Simple curls, sleek ponytails, or an easy polished look.</p><div class="price">Sample price: $25</div></article>
+  </div>
+ </div>
+</section>
+<section id="how">
+ <div class="section-inner center"><div class="eyebrow">Easy by design</div><h2 class="section-title">Your break, made a little better.</h2>
+  <div class="how-grid">
+   <div class="step"><div class="step-number">01</div><h3>Find our next stop</h3><p>Check participating workplace locations and the salon’s scheduled visit days.</p></div>
+   <div class="step"><div class="step-number">02</div><h3>Choose your service</h3><p>Select a service and request a time that works with your schedule.</p></div>
+   <div class="step"><div class="step-number">03</div><h3>Take your moment</h3><p>Visit the approved salon location, relax, and head back to your day feeling refreshed.</p></div>
+  </div>
+ </div>
+</section>
+<section id="story" class="story">
+ <div class="section-inner story-layout">
+  <div class="story-mark"><strong>The Self-Care Shift</strong><span>CARE FOR THE CAREGIVERS</span></div>
+  <div class="story-copy"><div class="eyebrow">Our story</div><h2 class="section-title">Two paths. One thoughtful idea.</h2><p>The Self-Care Shift was inspired by the combination of Ava Guerrieri’s interest in entering the healthcare field and Miranda Hamilton’s hairstyling background.</p><p>Together, we imagined a way to bring convenient hair care to the people who spend their days caring for others. Our goal is to make a little self-care easier to fit into a demanding schedule.</p></div>
+ </div>
+</section>
+<section class="partners">
+ <div class="section-inner"><div class="eyebrow" style="color:#e0c8a8">For hospitals and care facilities</div><h2 class="section-title">Bring a little self-care to your team.</h2><p class="intro">We envision partnering with hospitals and healthcare facilities to schedule on-site salon visits and explore employee-sponsored appointments.</p><a class="btn" href="#book" onclick="openBooking(event,'partner')">Ask about a partnership</a></div>
+</section>
+</main>
+<footer><div><strong>The Self-Care Shift</strong> · Care for the caregivers.</div><div>Entrepreneurship class concept by Ava Guerrieri & Miranda Hamilton</div><div>Concept website · Sample prices and booking only</div></footer>
+<div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal-box"><button class="close" onclick="closeBooking()" aria-label="Close">×</button><h2 id="modalTitle">Request an appointment</h2><p>Use this demo form to show how booking could work. No appointment will actually be scheduled.</p>
+ <form id="bookingForm">
+  <div class="field"><label for="name">Your name</label><input id="name" required placeholder="First and last name"></div>
+  <div class="field"><label for="email">Email</label><input id="email" type="email" required placeholder="you@example.com"></div>
+  <div class="field"><label for="location">Hospital or workplace</label><input id="location" required placeholder="Workplace name"></div>
+  <div class="field" id="serviceField"><label for="service">Service</label><select id="service"><option>Wash & Reset — sample $18</option><option>Quick Blowout — sample $35</option><option>Trim & Tidy — sample $30</option><option>Quick Style — sample $25</option></select></div>
+  <div class="field"><label for="timing">Preferred timing</label><select id="timing"><option>Lunch break</option><option>Before shift</option><option>After shift</option><option>Flexible</option></select></div>
+  <button class="btn" type="submit">Send demo request</button>
+  <div id="confirmation">Thanks! This is a website prototype, so your request has not been sent. In a live business, this step would connect to a booking system.</div>
+ </form>
+ </div>
+</div>
+<script>
+function openBooking(e,type){if(e)e.preventDefault();document.getElementById('bookingModal').classList.add('open');if(type==='partner'){document.getElementById('modalTitle').textContent='Ask about a hospital partnership';document.getElementById('serviceField').style.display='none';}else{document.getElementById('modalTitle').textContent='Request an appointment';document.getElementById('serviceField').style.display='block';}document.getElementById('confirmation').style.display='none';}
+function closeBooking(){document.getElementById('bookingModal').classList.remove('open')}
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('confirmation').style.display='block';});
+document.getElementById('bookingModal').addEventListener('click',function(e){if(e.target===this)closeBooking()});
+</script>
+</body>
+</html>
